@@ -10,6 +10,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Landpage />} />
           <Route path="/inicioS" element={<InicioSesion />} />
+          <Route path="/OlvidasteC" element={<InicioSesion />} />
         </Routes>
       </header>
     </div>
