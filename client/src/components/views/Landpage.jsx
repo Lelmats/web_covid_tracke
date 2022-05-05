@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
-import "./landpage.css";
+import "../css/landpage.css";
 
 function Landpage() { 
     
@@ -10,8 +10,8 @@ function Landpage() {
     const [emailReg, setEmailReg] = useState("");
     const [phoneReg, setPhoneReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
-    const [descriptionReg, setDescriptionReg] = useState("");
-    const [statusReg, setStatusReg] = useState("");
+    // const [descriptionReg, setDescriptionReg] = useState("");
+    // const [statusReg, setStatusReg] = useState("");
 
     const register = useCallback(() => {
         Axios.post("http://localhost:3001/register", {
@@ -20,13 +20,13 @@ function Landpage() {
             password: passwordReg,
             email: emailReg,
             phone: phoneReg,
-            description: descriptionReg,
-            status: statusReg,
+            // description: descriptionReg,
+            // status: statusReg,
 
         }).then((response) => {
             console.log(response);
         });
-    }, [usernameReg, apellidoReg, passwordReg, emailReg, phoneReg, descriptionReg, statusReg]);
+    }, [usernameReg, apellidoReg, passwordReg, emailReg, phoneReg]);
 
     return ( 
         <div className="container ">

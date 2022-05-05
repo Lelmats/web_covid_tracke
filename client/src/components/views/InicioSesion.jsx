@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Axios from "axios";
-
 
 function InicioSesion() { 
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [username, setUsername] = useState("");
+    // const [username, setUsername] = useState("");
 
     const [loginStatus, setLoginStatus] = useState("");
 
@@ -14,7 +14,7 @@ function InicioSesion() {
         Axios.post("http://localhost:3001/login", {
             email: email,
             password: password,
-            username: username,
+            // username: username,
 
         }).then((response) => {
             if(response.data.message){
@@ -39,16 +39,13 @@ function InicioSesion() {
                 <div className="d-grid gap-2  mx-auto ">
                 <button onClick={login} type="submit" className="btn btn-primary btn-lg">Iniciar sesión</button>
                 </div>
-                <button type="button" className="btn btn-link blue-600"><Link to="/inicioS">¿Olvidaste tu contraseña?</Link></button>
+                <button type="button" className="btn btn-link blue-600" ><Link to="/Recover">¿Olvidaste tu contraseña?</Link></button>
             </form>
             <div className="">
             {loginStatus}
             </div>
         </div>
-
-
     )
 };
 
 export default InicioSesion;
-

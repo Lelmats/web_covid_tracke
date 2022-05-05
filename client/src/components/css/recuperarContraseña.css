@@ -1,0 +1,18 @@
+.container{
+    padding: 30px 45px;
+    background-color: white;
+    box-shadow: 10px 15px 20px rgb(99, 96, 96);
+    font-family: 'Roboto', sans-serif, 700;
+    border-radius: 5px
+}
+
+.recover_1{
+    white-space: nowrap;
+    justify-content: auto;
+}
+.formRecover{
+    font-size: 2px;
+}
+.form-check {
+    padding-left: 0 !important;
+}
