@@ -1,34 +1,39 @@
 import React from "react";
 // import Axios from "axios";
+import "../css/recuperarContraseña.css";
 
 function Recover() { 
-
     return ( 
         <div className="container">
             <div className="formRecover">
-                <div className="form-check row g-2 px-2" >
-                    <h1 className="my-3"> Recuperar Contraseña </h1> 
-                    <hr/>
-                    <input type="radio" className="btn-check" id="btn-check-outlined" autocomplete="off" name="exampleRadios" value="option1"/>
-                    <label className="btn btn-outline-success" for="btn-check-outlined"> 
-                    <b>  Enviar código por correo electrónico </b>
+            <h1 className="my-3"> Recuperar Contraseña </h1> 
+                <hr/>
+                <div className="form-check px-2">
+                    <input type="radio" className="btn-radio" id="btn-check2-outlined" autocomplete="off" name="exampleRadios" value="option2"/>
+                    <label className="enviar-correo" >
+                    <b>Enviar código por correo electrónico</b>
+                    </label><br/>
+                    <label className="correo" >
+                    <span id="correo2">**********@gmail.com</span> 
                     </label><br/>
                 </div>
 
                 <div className="form-check px-2">
-                    <input type="radio" className="btn-check" id="btn-check2-outlined" autocomplete="off" name="exampleRadios" value="option2"/>
-                    <label className="btn btn-outline-success" for="btn-check2-outlined"> 
-                    <b> Enviar código por mensaje </b>
+                    <input type="radio" className="btn-radio" id="btn-check2-outlined" autocomplete="off" name="exampleRadios" value="option2"/>
+                    <label className="enviar-mensaje" >
+                    <b>Enviar código por mensaje</b>
                     </label><br/>
+                    <label className="numero" >
+                    <span>+52 ******4717</span> 
+                    </label><br/></div>
                     <hr/>
-                </div>
 
-
-
-                <button type="submit" className="btn btn-primary btn-lg"> <b> Continuar</b></button>
+                <button type="submit" className="btn btn-primary btn-lg">Continuar</button>
             </div>
         </div>
     )
 };
 
 export default Recover;
+
+
